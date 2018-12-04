@@ -8,7 +8,6 @@ To check if you have Node.js installed :
 
 ```
 node -v
-
 ```
 To check if you have npm installed :
 
