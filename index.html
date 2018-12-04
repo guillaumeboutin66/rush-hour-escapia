@@ -1,0 +1,99 @@
+<html>
+  <head>
+    <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/deepstream.io-client-js/2.1.1/deepstream.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" ></script>
+    <script type="text/javascript" src="main.js"></script> 
+    <script src="https://unpkg.com/aframe-text-geometry-component@0.5.1/dist/aframe-text-geometry-component.min.js"></script>
+    <script src="https://unpkg.com/aframe-physics-system@1.4.0/dist/aframe-physics-system.min.js"></script> 
+  </head>
+  <body>
+    <a-scene physics>
+      <a-assets>
+        <a-asset-item id="Container01-obj" src="./Object/TheCargoBay_OBJ/Container01.obj"></a-asset-item>
+        <a-asset-item id="Container02-obj" src="./Object/TheCargoBay_OBJ/Container02.obj"></a-asset-item>
+        <a-asset-item id="Scifi_Crate01-obj" src="./Object/TheCargoBay_OBJ/Scifi_Crate01.obj"></a-asset-item>
+        <a-asset-item id="human-obj"  src="./Object/man.obj"></a-asset-item>
+        <a-asset-item id="human-mtl"  src="./Texture/man/man.mtl"></a-asset-item>
+        <a-asset-item id="door-obj"  src="./Object/door_01.obj"></a-asset-item>
+
+
+
+
+        
+        <!-- source Mirror : https://medium.com/cma-thinker/who-is-yayoi-kusama-the-cleveland-infinity-mirrors-exhibition-opens-this-weekend-fa49a07e7fa0 -->
+        <img id="sky" src="./war1.jpg" />
+
+
+        <img id="blur-image" src="https://cdn.glitch.com/daae73ed-1502-4527-b809-03c18d6fb3e5%2Fblur.png?1503612651214">
+        
+        <a-asset-item id="street-lamp-obj" src="https://cdn.glitch.com/10eac27a-eba4-4e00-be20-e744cb21afd2%2Fmodel.obj?1503963016964"></a-asset-item>
+        <a-asset-item id="street-lamp-mtl" src="https://cdn.glitch.com/10eac27a-eba4-4e00-be20-e744cb21afd2%2Fmaterials.mtl?1503963017033"></a-asset-item>
+                
+        <a-mixin id="transition" dur="7000" direction="alternate" repeat="indefinite" easing="ease-out-cubic"></a-mixin>
+      </a-assets>
+
+
+      
+
+      
+      <!-- General Enviornment -->
+      <a-sky src="#sky" rotation="0 -90 0"></a-sky>
+      <a-light type="ambient" intensity=".8" color="#FF54CA"></a-light>
+      <a-plane id="ground" position="0 0 0" rotation="-90 0 0" width="10" height="50" color="#444" material="roughness: 0.5;"></a-plane>
+
+
+      <a-entity obj-model="obj: #human-obj;"  
+                position="0 0 -5"
+                mtl="#human-mtl"
+                scale="0.01 0.01 0.01"></a-entity>
+
+
+
+      <a-entity obj-model="obj: #Container01-obj;"  
+                position="0 0 -5"
+                material="color: white; shader: flat; src: ./Texture/TheCargoBay_Textures/The_Cargo_Bay/SciFi_Containers_Base_Color.png"></a-entity>
+      <a-entity obj-model="obj: #Container02-obj;"  
+                position="0 0 -10"
+                material="color: white; shader: flat; src: ./Texture/TheCargoBay_Textures/The_Cargo_Bay/SciFi_Containers_Base_Color.png"></a-entity>
+      <a-entity obj-model="obj: #Scifi_Crate01-obj; "                     
+                position="0 0 -15" 
+                material="color: white; shader: flat; src: ./Texture/TheCargoBay_Textures/The_Cargo_Bay/SciFi_Cases_Base_Color.png"></a-entity>
+
+
+    <a-entity obj-model="obj: #door-obj;" position="0 0 5" scale="0.4 0.4 0.4"
+                material="color: white; shader: flat; src: ./Texture/door_01.jpg"></a-entity>
+
+
+    <!-- <a-entity obj-model="obj: #human-obj; mtl: #human-mtl" position="0 0 5" scale="0.02 0.02 0.02"></a-entity> -->
+
+     <!--  <a-entity collada-model="url(./Scene/ScifiHangarScene.dae)"                    
+                position="0 1 0" ></a-entity> -->
+
+      <!-- <a-entity camera look-controls>
+        <a-entity cursor="fuse: true; fuseTimeout: 500"
+                  position="0 0 -1"
+                  geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03"
+                  material="color: black; shader: flat">
+        </a-entity>
+      </a-entity>
+-->
+      
+  <!--camera entity-->
+
+      <a-box position="-1 4 -3" rotation="0 45 0" color="#4CC3D9" dynamic-body></a-box>
+      <a-plane position="0 0.05 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4" static-body></a-plane>
+
+  <a-entity position="0 3.5 0">
+    <a-entity camera look-controls wasd-controls id="user-cam">
+      <a-entity position="0 0 -3" scale="0.2 0.2 0.2" geometry="primitive: ring; radiusOuter: 0.20; radiusInner: 0.13;" material="color: #fff; shader: flat" cursor="maxDistance: 30; fuse: true">
+        <a-animation begin="click" easing="ease-in" attribute="scale" fill="backwards" from="0.1 0.1 0.1" to="1 1 1" dur="150"></a-animation>
+        <a-animation begin="fusing" easing="ease-in" attribute="scale" fill="forwards" from="1 1 1" to="0.2 0.2 0.2" dur="1500"></a-animation>
+      </a-entity>
+    </a-entity>
+  </a-entity>
+
+    </a-scene>
+  </body>
+</html>
+

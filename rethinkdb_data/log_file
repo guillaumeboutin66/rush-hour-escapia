@@ -1,0 +1,30 @@
+2018-11-21T23:54:00.855119415 0.020921s notice: Recursively removing directory /data/rethinkdb_data/tmp
+2018-11-21T23:54:00.860482382 0.026287s notice: Initializing directory /data/rethinkdb_data
+2018-11-21T23:54:00.861177897 0.026979s info: Creating a default database for your convenience. (This is because you ran 'rethinkdb' without 'create', 'serve', or '--join', and the directory '/data/rethinkdb_data' did not already exist or is empty.)
+2018-11-21T23:54:00.861621971 0.027424s notice: Running rethinkdb 2.3.6~0jessie (GCC 4.9.2)...
+2018-11-21T23:54:00.867027640 0.032831s notice: Running on Linux 4.9.60-linuxkit-aufs x86_64
+2018-11-21T23:54:00.867366056 0.033167s notice: Loading data from directory /data/rethinkdb_data
+2018-11-21T23:54:00.889275167 0.055078s info: Automatically using cache size of 281 MB
+2018-11-21T23:54:00.890803249 0.056605s notice: Listening for intracluster connections on port 29015
+2018-11-21T23:54:00.892700080 0.058501s notice: Listening for client driver connections on port 28015
+2018-11-21T23:54:00.893248774 0.059050s notice: Listening for administrative HTTP connections on port 8080
+2018-11-21T23:54:00.894544885 0.060346s notice: Listening on cluster addresses: 127.0.0.1, 172.21.0.3
+2018-11-21T23:54:00.896364589 0.062166s notice: Listening on driver addresses: 127.0.0.1, 172.21.0.3
+2018-11-21T23:54:00.897278844 0.063080s notice: Listening on http addresses: 127.0.0.1, 172.21.0.3
+2018-11-21T23:54:00.897298324 0.063099s notice: Server ready, "e55bc2406038_qls" 3f5c68a3-a635-4227-bc9f-4fbd5eedcf51
+2018-11-21T23:56:48.775188628 167.940990s notice: Server got SIGTERM from pid 0, uid 0; shutting down...
+2018-11-21T23:56:48.775313517 167.941115s notice: Shutting down client connections...
+2018-11-21T23:56:48.776347205 167.942149s notice: All client connections closed.
+2018-11-21T23:56:48.776349187 167.942150s notice: Shutting down storage engine... (This may take a while if you had a lot of unflushed data in the writeback cache.)
+2018-11-21T23:56:48.779272930 167.945074s notice: Storage engine shut down.
+2018-11-22T17:13:17.979776562 0.012864s notice: Running rethinkdb 2.3.6~0jessie (GCC 4.9.2)...
+2018-11-22T17:13:17.983862604 0.016950s notice: Running on Linux 4.9.60-linuxkit-aufs x86_64
+2018-11-22T17:13:17.984306426 0.017393s notice: Loading data from directory /data/rethinkdb_data
+2018-11-22T17:13:18.002765751 0.035853s info: Automatically using cache size of 280 MB
+2018-11-22T17:13:18.004978457 0.038064s notice: Listening for intracluster connections on port 29015
+2018-11-22T17:13:18.006257396 0.039342s notice: Listening for client driver connections on port 28015
+2018-11-22T17:13:18.006792763 0.039929s notice: Listening for administrative HTTP connections on port 8080
+2018-11-22T17:13:18.007863999 0.040949s notice: Listening on cluster addresses: 127.0.0.1, 172.21.0.3
+2018-11-22T17:13:18.008751642 0.041838s notice: Listening on driver addresses: 127.0.0.1, 172.21.0.3
+2018-11-22T17:13:18.009436285 0.042521s notice: Listening on http addresses: 127.0.0.1, 172.21.0.3
+2018-11-22T17:13:18.009460197 0.042545s notice: Server ready, "e55bc2406038_qls" 3f5c68a3-a635-4227-bc9f-4fbd5eedcf51
