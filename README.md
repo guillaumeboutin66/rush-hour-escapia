@@ -18,6 +18,9 @@ npm -v
 ```
 
 ## Getting started : Install packages
+- Download or clone the project
+- Go in the directory with a terminal/console
+
 using npm for Install
 ```
 npm install --save
