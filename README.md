@@ -2,15 +2,17 @@
 
 An escape game in Virtual Reality made with A-frame.
 
-## How to launch
+## Install Node.js and npm
+
+Install from this link : https://nodejs.org/en/
+
 Check that you have node and npm installed
 To check if you have Node.js installed :
-
 ```
 node -v
 ```
-To check if you have npm installed :
 
+To check if you have npm installed :
 ```
 npm -v
 ```
@@ -21,7 +23,7 @@ using npm for Install
 npm install --save
 ```
 
-## Launch the server game
+## How to launch the server game
 using npm for launch
 ```
 npm start
